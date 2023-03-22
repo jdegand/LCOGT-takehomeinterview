@@ -1,0 +1,43 @@
+body {
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin-block: 15px;
+}
+
+button {
+  display: block;
+  margin-block: 25px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li {
+  list-style-type: none;
+  margin-inline: 20px;
+}
+
+.active {
+  text-decoration: none;
+  color: gray;
+  cursor: default;
+}
+
+@media (min-width: 500px) {
+  body {
+    padding: 10px 40px;
+  }
+}
