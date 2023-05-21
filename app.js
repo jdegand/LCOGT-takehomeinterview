@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const sqlite3 = require('sqlite3');
 const {open} = require('sqlite');
+const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const planetsRouter = require('./routes/planets');
@@ -15,6 +16,8 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/planets', planetsRouter);
@@ -41,8 +44,8 @@ const setup = async() => {
     driver: sqlite3.Database
   });
   await db.migrate();
-  app.listen(3000, ()=> {
-    console.log(`Listening on PORT:`, 3000);
+  app.listen(8080, ()=> {
+    console.log(`Listening on PORT:`, 8080);
   });
 }
 

@@ -9,18 +9,19 @@ router.get('/add', function(req,res,next) {
 
 router.post('/', async function(req, res, next) {
 
+  const {name, size, distance, ordinality, description} = req.body;
+
   const db = await open({
     filename: './data.db',
     driver: sqlite3.Database
   });
 
-  const {name, size, distance, ordinality, description} = req.body;
-
   db.run("INSERT INTO planets(name,size,distance,ordinality,description) VALUES(?,?,?,?,?);", [name, size, distance, ordinality, description], (err)=> {
     if(err) console.error(err.message);
   })
+
+  res.json({status: 201, message: 'Created'});
   
-  res.redirect("/");
 });
 
 
@@ -37,7 +38,7 @@ router.get('/detail/:name', async function(req,res,next) {
     if(err) console.error(err.message);
   })
 
-  res.render('planet-detail', {data: data});
+  res.json(data);
 })
 
 module.exports = router;
