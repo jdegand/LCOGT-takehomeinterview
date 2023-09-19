@@ -1,6 +1,6 @@
 # Take Home Interview Project
 
-This is my solution to this [repo](https://github.com/LCOGT/takehomeinterview).
+This is my solution to a past interview challenge from [LCOGT](https://github.com/LCOGT). 
 
 ## Screenshots 
 
@@ -32,7 +32,8 @@ This is my solution to this [repo](https://github.com/LCOGT/takehomeinterview).
 
 ***
 
-## Goal
+## Directions
+
 Create a web application where a user can view and add planets to a database.
 
 ### Estimated time for completion:
