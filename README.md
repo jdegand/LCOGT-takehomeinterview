@@ -1,6 +1,6 @@
 # Take Home Interview Project
 
-This is my solution to this [repo](https://github.com/LCOGT/takehomeinterview).
+This is my solution to a past interview challenge from [LCOGT](https://github.com/LCOGT). 
 
 ## Screenshots 
 
